@@ -29,4 +29,6 @@ bot.use(require('./composers/hears.composer'))
 bot.use(require('./composers/courses.composer'))
 bot.use(require('./composers/enroll.composer'))
 
-bot.launch()
+bot.launch().then(() => {
+	console.log(`bot started on @${bot.options.username}`)
+})

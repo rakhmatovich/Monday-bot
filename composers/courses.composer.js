@@ -201,7 +201,7 @@ function getInfo(text) {
 }
 
 getInfo('Получить больше информации о Monday и курсах')
-getInfo('Свяжись с нами')
+getInfo('Связаться с Monday')
 
 
 module.exports = composer

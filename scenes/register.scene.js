@@ -66,7 +66,7 @@ module.exports = new WizardScene(
             }
             await ctx.replyWithHTML(`Что вас интересует <b>${ctx.from.first_name}</b>?`, {
                 reply_markup: Markup.keyboard([
-                    [Markup.callbackButton('курсы'), Markup.callbackButton('Связаться с нами')]
+                    [Markup.callbackButton('курсы'), Markup.callbackButton('Связаться с Monday')]
                 ]).resize(),
             })
             return ctx.scene.leave()
