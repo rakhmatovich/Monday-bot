@@ -4,7 +4,7 @@ const composer = new Composer()
 
 composer.command('start', async (ctx) => {
 	try {
-		await ctx.replyWithHTML(`👋 Привет
+		await ctx.replyWithHTML(`👋 Здравствуйте
 		Зарегистрируйтесь, чтобы использовать нашего бота ✅`)
 		await ctx.scene.enter('register')
 	} catch (e) {

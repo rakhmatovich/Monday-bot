@@ -190,7 +190,7 @@ function getInfo(text) {
                     [Markup.callbackButton('👨‍💻Бэкенд')],
                     [Markup.callbackButton('🧑‍🎨Графический дизайн')],
                     [Markup.callbackButton('📱Мобильная разработка')],
-                    [Markup.callbackButton('🏠3d Max')],
+                    [Markup.callbackButton('🏠3D Max')],
                     [Markup.callbackButton('🤳SMM')],
                 ]).resize(),
             })
