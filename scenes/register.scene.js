@@ -25,12 +25,11 @@ module.exports = new WizardScene(
             if (fullName.length < 2) return
             ctx.session.fullName = fullName
 
-            await ctx.replyWithHTML('Отправьте свой номер телефона',{
+            await ctx.replyWithHTML('Отправьте свой номер телефона', {
                 reply_markup: Markup.keyboard([
-                        Markup.contactRequestButton("📞 Отправить номер телефона"),
-                    ]).resize().oneTime().forceReply(),
-                }
-            )
+                    Markup.contactRequestButton("📞 Отправить номер телефона"),
+                ]).resize().oneTime().forceReply(),
+            })
             return ctx.wizard.next()
         } catch (e) {
             console.error(e);
