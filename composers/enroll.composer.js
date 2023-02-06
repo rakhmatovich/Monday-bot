@@ -11,7 +11,8 @@ composer.hears("записаться на курс 🤳SMM", async (ctx) => {
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
 
@@ -45,7 +46,8 @@ composer.hears("записаться на курс 🧑‍🎨Графическ
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
 
@@ -79,7 +81,8 @@ composer.hears("записаться на курс 👨‍💻Бэкенд", asy
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
         
@@ -113,7 +116,8 @@ composer.hears("записаться на курс 👨‍💻Фронтенд",
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
 
@@ -147,7 +151,8 @@ composer.hears("записаться на курс 📱Мобильная раз
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
 
@@ -181,7 +186,8 @@ composer.hears("записаться на курс 🏠3D Max", async (ctx) => {
     try {
         await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
             reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')]
+                [Markup.callbackButton('📍Где находится Monday?')],
+                [Markup.callbackButton('Связаться с Monday')]
             ]).resize(),
         })
 
