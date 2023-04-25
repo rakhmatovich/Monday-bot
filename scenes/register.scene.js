@@ -13,7 +13,7 @@ module.exports = new WizardScene(
     'register',
     async (ctx) => {
         try {
-            await ctx.replyWithHTML(`Ваше фамилия и имя?`)
+            await ctx.replyWithHTML(`Напишите свое имя и фамилию !`)
             return ctx.wizard.next()
         } catch (e) {
             console.error(e);

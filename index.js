@@ -11,7 +11,7 @@ require('dotenv').config()
 // db.all(sql, [], (err, rows) => {
 // 	if (err) return console.error(err.message);
 // 	rows.forEach(row => {
-// 		bot.telegram.sendMessage(row.chat_id, 'https://t.me/mondayAcademy')
+// 		bot.telegram.sendMessage(row.chat_id, `https://t.me/mondayAcademy`)
 // 	})
 // })
 

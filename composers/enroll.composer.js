@@ -7,18 +7,22 @@ const db = new sqlite3.Database('./usersInfo.db', sqlite3.OPEN_READWRITE, (err) 
     if (err) return console.error(err.message);
 })
 
+const button = [
+    [Markup.callbackButton('📍Где находится Monday?')],
+    [Markup.callbackButton('Связаться с Monday')]
+]
+
+const sql = `SELECT * FROM users WHERE chat_id = ?`
+const replyText = `Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`
+
 composer.hears("записаться на курс 🤳SMM", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
 
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
-            if (err)
-                return console.error(err.message);
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
+            if (err) return console.error(err.message);
             let obj = row[0];
             axios.post('http://localhost:3000/users', {
                 name: obj.full_name,
@@ -44,14 +48,11 @@ composer.hears("записаться на курс 🤳SMM", async (ctx) => {
 
 composer.hears("записаться на курс 🧑‍🎨Графический дизайн", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
 
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
             if (err)
                 return console.error(err.message);
             let obj = row[0];
@@ -79,14 +80,11 @@ composer.hears("записаться на курс 🧑‍🎨Графическ
 
 composer.hears("записаться на курс 👨‍💻Бэкенд", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
-        
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
+
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
             if (err)
                 return console.error(err.message);
             let obj = row[0];
@@ -114,14 +112,11 @@ composer.hears("записаться на курс 👨‍💻Бэкенд", asy
 
 composer.hears("записаться на курс 👨‍💻Фронтенд", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
 
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
             if (err)
                 return console.error(err.message);
             let obj = row[0];
@@ -149,14 +144,11 @@ composer.hears("записаться на курс 👨‍💻Фронтенд",
 
 composer.hears("записаться на курс 📱Мобильная разработка", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
 
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
             if (err)
                 return console.error(err.message);
             let obj = row[0];
@@ -184,14 +176,11 @@ composer.hears("записаться на курс 📱Мобильная раз
 
 composer.hears("записаться на курс 🏠3D Max", async (ctx) => {
     try {
-        await ctx.replyWithHTML(`Спасибо за ваше потраченное время. Мы свяжемся с вами в ближайшее время😊`, {
-            reply_markup: Markup.keyboard([
-                [Markup.callbackButton('📍Где находится Monday?')],
-                [Markup.callbackButton('Связаться с Monday')]
-            ]).resize(),
+        await ctx.replyWithHTML(replyText, {
+            reply_markup: Markup.keyboard(button).resize(),
         })
 
-        db.all(`SELECT * FROM users WHERE chat_id = ?`, [ctx.message.chat.id], (err, row) => {
+        db.all(sql, [ctx.message.chat.id], (err, row) => {
             if (err)
                 return console.error(err.message);
             let obj = row[0];

@@ -1,22 +1,23 @@
-const { Composer, Markup } = require('telegraf')
+const {Composer, Markup} = require('telegraf')
 const composer = new Composer()
 
 
 function coursesInfo(text) {
     composer.hears(text, async (ctx) => {
         try {
+            // await ctx.tg.deleteMessage(ctx.chat.id, ctx.message.message_id)
             await ctx.replyWithHTML(
                 '<b>Наши курсы</b>', {
-                reply_markup: Markup.keyboard([
-                    [Markup.callbackButton('👨‍💻Фронтенд')],
-                    [Markup.callbackButton('👨‍💻Бэкенд')],
-                    [Markup.callbackButton('🧑‍🎨Графический дизайн')],
-                    [Markup.callbackButton('📱Мобильная разработка')],
-                    [Markup.callbackButton('🏠3D Max')],
-                    [Markup.callbackButton('🤳SMM')],
-                    [Markup.callbackButton('Получить больше информации о Monday и курсах')]
-                ]).resize(),
-            })
+                    reply_markup: Markup.keyboard([
+                        [Markup.callbackButton('👨‍💻Фронтенд')],
+                        [Markup.callbackButton('👨‍💻Бэкенд')],
+                        [Markup.callbackButton('🧑‍🎨Графический дизайн')],
+                        [Markup.callbackButton('📱Мобильная разработка')],
+                        [Markup.callbackButton('🏠3D Max')],
+                        [Markup.callbackButton('🤳SMM')],
+                        [Markup.callbackButton('Получить больше информации о Monday и курсах')]
+                    ]).resize(),
+                })
         } catch (e) {
             console.error(e);
         }
@@ -100,7 +101,6 @@ composer.hears('🧑‍🎨Графический дизайн', async (ctx) => 
 })
 
 
-
 // Мобильная разработка
 composer.hears('📱Мобильная разработка', async (ctx) => {
     try {
@@ -173,15 +173,14 @@ composer.hears('🤳SMM', async (ctx) => {
 })
 
 
-
-
-
 // Получить больше информации о Monday и курсах
 
 function getInfo(text) {
     composer.hears(text, async (ctx) => {
         try {
-            await ctx.replyWithHTML(`Вы можете связаться с нами, позвонив по этому номеру и получить дополнительную информацию: +998936224020
+            await ctx.replyWithHTML(`Вы можете связаться с нами, позвонив по этому номеру и получить дополнительную информацию: 
+
+<b>+998936224020</b>
 
 <b><a href="t.me/mondayAcademy">Telegram</a></b> | <b><a href="https://www.instagram.com/monday.academy">Instagram</a></b> | <b><a href="https://www.tiktok.com/@monday_academy?_t=8ZGfPFSt9ve&_r=1">Tiktok</a></b>`, {
                 disable_web_page_preview: true,
