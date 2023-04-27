@@ -1,6 +1,9 @@
 const { Telegraf, Stage, session } = require('telegraf')
 require('dotenv').config()
 
+const token = process.env.BOT_TOKEN
+const bot = new Telegraf(token)
+
 //// send massage to all users!!!
 // const sqlite3 = require('sqlite3').verbose()
 // const db = new sqlite3.Database('./usersInfo.db', sqlite3.OPEN_READWRITE, (err) => {
@@ -15,8 +18,6 @@ require('dotenv').config()
 // 	})
 // })
 
-const token = process.env.BOT_TOKEN
-const bot = new Telegraf(token)
 
 bot.use(session())
 
